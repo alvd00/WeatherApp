@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Android with Kotlin</string>
+    <string name="temperature_label">Температура</string>
+    <string name="feels_like_label">Ощущается как</string>
+    <string name="city_coordinates">lt/ln: %s, %s"</string>
+    <string name="Pressure">Давление</string>
+    <string name="Moscow">Москва</string>
+    <string name="pressure1000">1000hPA</string>
+</resources>
