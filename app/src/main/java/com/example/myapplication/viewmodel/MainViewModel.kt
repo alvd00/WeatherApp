@@ -8,6 +8,9 @@ import ru.geekbrains.androidwithkotlin.model.repository.Repository
 import com.example.myapplication.model.repository.RepositoryImpl
 import java.lang.Thread.sleep
 
+
+private const val THREE_SECONDS = 3000
+
 class MainViewModel(private val repository: Repository = RepositoryImpl()) :
     ViewModel() {
 
@@ -24,7 +27,7 @@ class MainViewModel(private val repository: Repository = RepositoryImpl()) :
     private fun getDataFromLocalSource(isRussia: Boolean) {
         liveDataToObserve.value = AppState.Loading
         Thread {
-            sleep(3000)
+            sleep(THREE_SECONDS.toLong())
             liveDataToObserve.postValue(
                 AppState.Success(
                     if (isRussia) repository.getWeatherFromLocalStorageRus()
